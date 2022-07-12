@@ -1,0 +1,55 @@
+#include "C:\Users\danki\source\repos\2022_515b_KirichenkoD\2022_515b_KirichenkoD\main.c"
+#include "calculations.h"
+
+
+TEST(Function_calculation_perimetr, Test1) {
+	double x[4] = { +12,-12,+8,-4 };
+	double y[4] = { +12,-4,-7,-6 };
+	EXPECT_EQ(85.193, calculation_perimeter(x, y, 4));
+	EXPECT_TRUE(true);
+
+	double x[6] = { -1,+3,-2,+8,-2,+7 }; 
+	double y[6] = { 12,-3,-4,-7,-2,+9 };
+	EXPECT_EQ(65.001, calculation_perimeter(x, y, 6));
+	EXPECT_TRUE(true);
+
+	double x[9] = { 4,+4,-3,-3,-3,-3,+1,+4,+4 };
+	double y[9] = { 1,+3,+3,+1,-3,-5,-5,-5,-2 };
+	EXPECT_EQ(30.000, calculation_perimeter(x, y, 9));
+	EXPECT_TRUE(true);
+}
+
+TEST(Function_calculation_perimetr, Test2) {
+	double x[2] = { +12,+12 };
+	double y[2] = { -54,-54 };
+	EXPECT_EQ(0.000, calculation_perimeter(x, y, 2));
+	EXPECT_TRUE(true);
+
+	double x[2] = { -21,-21 };
+	double y[2] = { +11,+11 };
+	EXPECT_EQ(0.000, calculation_perimeter(x, y, 2));
+	EXPECT_TRUE(true);
+
+	double x[3] = { 0, 21, 16 };
+	double y[3] = { 0, 21, 16 };
+	EXPECT_EQ(0.000, calculation_perimeter(x, y, 3));
+	EXPECT_TRUE(true);
+}
+
+TEST(Function_calculation_perimetr, Test3) {
+	double x[1] =  +12 ;
+	double y[1] = -122;
+	EXPECT_EQ(0.000, calculation_perimeter(x, y, 1));
+	EXPECT_TRUE(true);
+
+	double x[1] =  -1 ; 
+	double y[1] =  12 ;
+	EXPECT_EQ(0.000, calculation_perimeter(x, y, 1));
+	EXPECT_TRUE(true);
+
+	double x[1] = 4;
+	double y[1] = 1;
+	EXPECT_EQ(0.000, calculation_perimeter(x, y, 1));
+	EXPECT_TRUE(true);
+}
+
